@@ -1,0 +1,78 @@
+select#pa_color {
+    display: none;
+}
+
+/* Swatch Container */
+ul.swatch-pa_color {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Swatch Item */
+li.variable-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+li.variable-item:hover {
+    transform: scale(1.1);
+}
+
+/* Swatch Item - Selected */
+li.variable-item.selected {
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Swatch Item Label */
+.variable-item-span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.variable-item-span-color {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Swatch Item Label - Selected */
+li.variable-item.selected .variable-item-span {
+    border: 1px solid #000;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Swatch Item Label - Disabled */
+li.variable-item.disabled .variable-item-span {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Swatch Item Label - Selected */
+li.variable-item .variable-item-span {
+    border: 1px solid transparent;
+}
+
+li.variable-item {
+    /* your existing styles */
+    transition: all 0.2s ease-in-out;
+}
+
+li.variable-item.selected {
+    /* your existing styles */
+    transition: all 0.2s ease-in-out;
+}
